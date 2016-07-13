@@ -2,7 +2,9 @@
 
 <h1>Listing States</h1>
 
-<table>
+<%= link_to 'New State', new_state_path, class: "btn btn-success" %>
+
+<table class="table">
   <thead>
     <tr>
       <th>ID</th>
@@ -27,7 +29,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New State', new_state_path %>

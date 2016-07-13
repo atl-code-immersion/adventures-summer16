@@ -1,4 +1,27 @@
+<style>
+	.changeling {
+		background: <%= @color %>;
+		height: 250px;
+	}
+</style>
+
 <h1>What About Us?</h1>
 <h3>Who are we? What is our purpose? Where are we going? When will we get there? How will we do it?</h3>
 <p>These are questions. Do you have answers? I don't.</p>
 
+<p>Soothe your worried mind with these buttons:</p>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3 center-it">
+		<p>
+			<% @colors.each do |k,v| %>
+				<%= link_to k.capitalize, about_path(color: k), class: "btn btn-#{v}" %>
+			<% end %>
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="well changeling">
+		</div>
+	</div>
+</div>

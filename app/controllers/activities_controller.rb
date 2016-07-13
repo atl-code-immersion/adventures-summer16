@@ -5,6 +5,9 @@ class ActivitiesController < ApplicationController
   # GET /activities.json
   def index
     @activities = Activity.all
+    
+    @activity_pics = {"camels.jpg" => "Camel Trek", "hiking.jpg" => "Take a Hike", "skiing.jpg" => "Hit the Slopes", "land-rover.jpg" => "Where we're going, we don't need roads."}
+    @activity_pics = Hash[@activity_pics.to_a.shuffle]
   end
 
   # GET /activities/1

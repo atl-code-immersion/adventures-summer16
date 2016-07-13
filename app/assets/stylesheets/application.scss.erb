@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+	background: url(<%= asset_path 'up-a-hill.jpeg' %>) no-repeat center center fixed;
+	background-size: cover;
+}
+
+.container {
+	background: rgba(255,255,255,0.8);
+	margin-top: 50px;
+}
+
+.center-it {
+	text-align: center;
+}
+
+.jumbotron {
+	background: none;
+}
+
+#opening_div {
+
+}

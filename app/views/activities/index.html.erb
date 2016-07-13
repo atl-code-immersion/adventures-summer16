@@ -2,7 +2,9 @@
 
 <h1>Listing Activities</h1>
 
-<table>
+<%= link_to 'New Activity', new_activity_path, class: "btn btn-success" %>
+
+<table class="table">
   <thead>
     <tr>
       <th>ID</th>
@@ -28,6 +30,8 @@
   </tbody>
 </table>
 
-<br>
-
-<%= link_to 'New Activity', new_activity_path %>
+<p>
+  <% @activity_pics.each do |pic, descr| %>
+    <%= image_tag pic, alt: descr, class: "img-responsive" %>
+  <% end %>
+</p>
